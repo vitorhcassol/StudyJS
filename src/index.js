@@ -1,4 +1,4 @@
-//Tipos de dados
+//---------------------Tipos de dados---------------------------
 
 //Boolean
 console.log(typeof true);
@@ -33,3 +33,28 @@ console.log(
     nome: "Vitor"
   }
 );
+
+//---------------------Variáveis---------------------------
+
+//variáveis globais e de escopo
+
+//var
+var resposta = 42;
+console.log(resposta);
+
+//let
+let idade = 22;
+console.log(idade);
+
+//const
+const mundial = 0;
+console.log(mundial);
+
+//let e var permitem atribuiçao de novos valores a variavel
+resposta = 24;
+console.log(resposta);
+idade = idade + 1;
+console.log(idade);
+
+//const é uma constante e nao pode ser alterada
+//mundial = 1; // gera erro
