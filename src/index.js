@@ -180,7 +180,7 @@ const variavelGlobal = 1;
 
 const testeVariavel = () => {
   console.log(variavelGlobal);
-  const variavelDeFuncao = 2;
+  const variavelDeFuncao = 2; //variavel de escopo de função
   console.log(variavelDeFuncao);
 };
 
@@ -190,8 +190,40 @@ const testeVariavel = () => {
 /*
 {
   console.log(variavelGlobal);
-  const variavelDeBloco = 3;
+  const variavelDeBloco = 3; //variavel de escopo de bloco
   console.log(variavelDeBloco);
 }
 */
 //console.log(variavelDeBloco); gera erro pois a variavel de bloco só pode ser acessada dentro do bloco
+
+//----------------------------Tratamento de Erros---------------------------
+
+//try cathc / try finally e try catch finally
+
+//criando uma função que gera um erro
+const gerarErro = () => {
+  throw new Error("Ops, algo deu errado");
+};
+
+//try catch finally
+
+const erroComTratamento = () => {
+  try {
+    gerarErro();
+  } catch (error) {
+    console.log(`Um erro aconteceu: ${error.message}`);
+  } finally {
+    console.log("finally está sendo chamado");
+  }
+};
+
+erroComTratamento();
+
+console.log("Executado depois do error com tratamento");
+
+const erroSemTratamento = () => {
+  gerarErro();
+};
+erroSemTratamento();
+
+console.log("Executado depois do error sem tratamento"); //Não é executado
