@@ -171,3 +171,27 @@ for (let nome of nomes) {
   console.log(`${nome}`)
 }
 */
+
+//----------------------------Escopo---------------------------
+
+//Escopo Global
+
+const variavelGlobal = 1;
+
+const testeVariavel = () => {
+  console.log(variavelGlobal);
+  const variavelDeFuncao = 2;
+  console.log(variavelDeFuncao);
+};
+
+//testeVariavel();
+//console.log(variavelDeFuncao); gera erro, afinal a variavel de função só pode ser acessada dentro da função
+
+/*
+{
+  console.log(variavelGlobal);
+  const variavelDeBloco = 3;
+  console.log(variavelDeBloco);
+}
+*/
+//console.log(variavelDeBloco); gera erro pois a variavel de bloco só pode ser acessada dentro do bloco
