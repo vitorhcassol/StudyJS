@@ -35,3 +35,39 @@ const ParOuImpar = (n) => {
 }
 
 //ParOuImpar(2);
+
+//------------------Comparação de valores------------
+
+//Igualdade
+
+console.log(3 == '3'); //comparação de igualdade que ignora a tipagem do dado
+console.log(3 === '3'); //comparação de igualdade que inclui a tipagem do dado
+console.log('a' === "A"); //ambas as comparações são CaseSensitive
+
+//Diferença
+
+console.log(3 != '3');
+console.log(3 !== "3");
+console.log('a' !== "A");
+
+//Maior
+
+console.log(3 > 1);
+console.log(3 > 4);
+console.log(3 > 3);
+console.log(3 >= 3);
+
+//Menor
+
+console.log(3 < 1);
+console.log(3 < 4);
+console.log(3 < 3);
+console.log(3 <= 3);
+
+const numeroMaxDeAlunos = 5;
+var numeroDeAlunos = 6;
+if (numeroMaxDeAlunos < numeroDeAlunos) {
+    console.log("Número máximo de alunos extrapolado!")
+} else {
+    console.log("Número máximo de alunos está OK!")
+}
