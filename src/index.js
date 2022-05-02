@@ -107,7 +107,7 @@ console.log(booleanT ? "Verdadeiro" : "Falso");
 console.log(booleanF ? "Verdadeiro" : "Falso");
 
 //Switch
-//const opcao = prompt("Digite uma opção entre 1 e 3: ");
+/*const opcao = prompt("Digite uma opção entre 1 e 3: ");
 switch (opcao) {
   case "1":
     console.log("Opção 1 digitada.");
@@ -122,3 +122,108 @@ switch (opcao) {
     console.log("Opção inválida.");
     break;
 }
+*/
+
+//----------------------------Laços---------------------------
+
+//while
+
+/*
+let a = 1;
+while (a <= 10) {
+  console.log(`valor de a = ${a}`);
+  a = a+1;
+}
+*/
+
+//do.. while
+
+/*
+let b = 1;
+do {
+  console.log(`valor de b = ${b}`);
+  b = b+1;
+} while (b <= 10);
+*/
+
+//for
+
+/*
+for (let i = 1; i <= 10; i++) {
+  console.log(`o valor de i = ${i}`);
+}
+*/
+
+//for..in
+
+/*
+const pessoa = { nome: "Vitor", idade: 22 };
+for (let chave in pessoa) {
+  console.log(`${chave}`);
+}
+*/
+
+//for..of
+
+/*
+const nomes = ["Vitor", "Alexandre", "Raissa"];
+for (let nome of nomes) {
+  console.log(`${nome}`)
+}
+*/
+
+//----------------------------Escopo---------------------------
+
+//Escopo Global
+
+const variavelGlobal = 1;
+
+const testeVariavel = () => {
+  console.log(variavelGlobal);
+  const variavelDeFuncao = 2; //variavel de escopo de função
+  console.log(variavelDeFuncao);
+};
+
+//testeVariavel();
+//console.log(variavelDeFuncao); gera erro, afinal a variavel de função só pode ser acessada dentro da função
+
+/*
+{
+  console.log(variavelGlobal);
+  const variavelDeBloco = 3; //variavel de escopo de bloco
+  console.log(variavelDeBloco);
+}
+*/
+//console.log(variavelDeBloco); gera erro pois a variavel de bloco só pode ser acessada dentro do bloco
+
+//----------------------------Tratamento de Erros---------------------------
+
+//try cathc / try finally e try catch finally
+
+//criando uma função que gera um erro
+const gerarErro = () => {
+  throw new Error("Ops, algo deu errado");
+};
+
+//try catch finally
+
+const erroComTratamento = () => {
+  try {
+    gerarErro();
+  } catch (error) {
+    console.log(`Um erro aconteceu: ${error.message}`);
+  } finally {
+    console.log("finally está sendo chamado");
+  }
+};
+
+erroComTratamento();
+
+console.log("Executado depois do error com tratamento");
+
+const erroSemTratamento = () => {
+  gerarErro();
+};
+erroSemTratamento();
+
+console.log("Executado depois do error sem tratamento"); //Não é executado
