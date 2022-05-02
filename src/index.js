@@ -107,7 +107,7 @@ console.log(booleanT ? "Verdadeiro" : "Falso");
 console.log(booleanF ? "Verdadeiro" : "Falso");
 
 //Switch
-//const opcao = prompt("Digite uma opção entre 1 e 3: ");
+/*const opcao = prompt("Digite uma opção entre 1 e 3: ");
 switch (opcao) {
   case "1":
     console.log("Opção 1 digitada.");
@@ -122,3 +122,52 @@ switch (opcao) {
     console.log("Opção inválida.");
     break;
 }
+*/
+
+//----------------------------Laços---------------------------
+
+//while
+
+/*
+let a = 1;
+while (a <= 10) {
+  console.log(`valor de a = ${a}`);
+  a = a+1;
+}
+*/
+
+//do.. while
+
+/*
+let b = 1;
+do {
+  console.log(`valor de b = ${b}`);
+  b = b+1;
+} while (b <= 10);
+*/
+
+//for
+
+/*
+for (let i = 1; i <= 10; i++) {
+  console.log(`o valor de i = ${i}`);
+}
+*/
+
+//for..in
+
+/*
+const pessoa = { nome: "Vitor", idade: 22 };
+for (let chave in pessoa) {
+  console.log(`${chave}`);
+}
+*/
+
+//for..of
+
+/*
+const nomes = ["Vitor", "Alexandre", "Raissa"];
+for (let nome of nomes) {
+  console.log(`${nome}`)
+}
+*/
